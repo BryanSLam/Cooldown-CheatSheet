@@ -50,10 +50,30 @@ while(menuSelection != '3'):
 	if (menuSelection == '1'):
 		print "There are no spaces, apostrophes, and capitalizations except the first letter. Examples: Drmundo, Khazix, Chogath, Jarvaniv"
 		hero1 = raw_input('1:').capitalize()
+		while((hero1 in database) == False):
+			print "Character doesn't exist in database try again"
+			hero1 = raw_input('1:').capitalize()
+			
 		hero2 = raw_input('2:').capitalize()
+		while((hero2 in database) == False):
+			print "Character doesn't exist in database try again"
+			hero2 = raw_input('2:').capitalize()
+			
 		hero3 = raw_input('3:').capitalize()
+		while((hero3 in database) == False):
+			print "Character doesn't exist in database try again"
+			hero3 = raw_input('3:').capitalize()
+			
 		hero4 = raw_input('4:').capitalize()
+		while((hero4 in database) == False):
+			print "Character doesn't exist in database try again"
+			hero4 = raw_input('4:').capitalize()
+			
 		hero5 = raw_input('5:').capitalize()
+		while((hero5 in database) == False):
+			print "Character doesn't exist in database try again"
+			hero5 = raw_input('5:').capitalize()
+			
 		print "\n"
 		print "Enemy Line up\n"
 	
