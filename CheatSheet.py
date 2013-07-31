@@ -34,7 +34,8 @@ database = {"Ahri": (110, 95, 80), "Akali": (2, 1.5, 1), "Alistar": (120, 100, 8
 "Twitch":(120,110,100), "Udyr":(6,6,6), "Urgot":(120,120,120), "Varus":(120,105,90), "Vayne":(70,70,70), "Veigar":(130,110,90),
 "Vi":(130,105,80), "Viktor":(120,120,120), "Vladimir":(150,135,120), "Volibear":(100,90,80), "Warwick":(90,80,70), "Wukong":(120,105,90),
 "Xerath":(80,70,60), "Xinzhao":(120,110,100), "Yorick":(120,105,90), "Zed":(120,105,90), "Ziggs":(120,105,90), "Zilean":(180,180,180),
-"Zyra":(130,120,110)}
+"Zyra":(130,120,110), "Barrier":(210), "Clairvoyance":(60), "Clarity":(180), "Cleanse":(210), "Exhaust":(210), "Flash":(300), "Ghost":(210),
+"Heal":(300), "Ignite":(210), "Revive":(540), "Smite":(70), "Teleport":(300)}
 		
 
 		
@@ -44,6 +45,7 @@ while(menuSelection != '0'):
 	print "1: Input team line up"
 	print "2: Individual lookup"
 	print "3: Summoner spell reference"
+	print "4: Objective timers"
 	print "0: Quit"
 	menuSelection = raw_input('>> ')
 	
@@ -88,6 +90,7 @@ while(menuSelection != '0'):
 		print hero5 + ":", database[hero5][0], database[hero5][1], database[hero1][2]
 		print "\n"
 	
+	#Individual lookup
 	elif(menuSelection == '2'):
 		print "There are no spaces, apostrophes, and capitalizations except the first letter. Examples: Drmundo, Khazix, Chogath, Jarvaniv"
 		hero1 = raw_input('1:').capitalize()
@@ -97,6 +100,23 @@ while(menuSelection != '0'):
 		print "\n"
 		print hero1 + ":", database[hero1][0], database[hero1][1], database[hero1][2]
 		print "\n"
+		
+	elif(menuSelection == '3'):
+		print "Summoner spells no spaces or punctuation\n"
+		spell = raw_input('Spell: ').capitalize()
+		while ((spell in database) == False):
+			print "Spell doesn't exist in database try again"
+			spell = raw_input('Spell: ').capitalize()
+		print "\n"
+		print spell + ":", database[spell]
+		print "\n"
+		
+	elif(menuSelection == '4'):
+		print "Quick timer reference sheet:\n"
+		print "Blue: Spawns at 1:55 respawns every 5:00 minutes\n"
+		print "Red: Spawns at 1:55 respawns every 5:00 minutes\n"
+		print "Dragon: Spawns at 2:30 respawns every 6:00 minutes\n"
+		print "Baron: Spawns at 15:00 respawns every 7:00 minutes\n"
 if (menuSelection == '0'):
 		sys.exit()
 
