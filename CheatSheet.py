@@ -12,7 +12,8 @@ class Hero(object):
 		self.cd3 = cd3
 		
 database = {"Ahri": (110, 95, 80), "Akali": (2, 1.5, 1), "Alistar": (120, 100, 80),
-"Amumu": (150,130, 110), "Anivia": (6,6,6)}
+"Amumu": (150,130,110), "Anivia": (6,6,6), "Annie" : (120,120,120), "Ashe" : (100,90,80),
+"Blitzcrank": (30,30,30}
 		
 
 		
