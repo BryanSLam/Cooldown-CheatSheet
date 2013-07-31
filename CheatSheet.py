@@ -39,8 +39,8 @@ database = {"Ahri": (110, 95, 80), "Akali": (2, 1.5, 1), "Alistar": (120, 100, 8
 
 		
 print "Main Menu"
-menuSelection = 0
-while(menuSelection != '3'):
+menuSelection = -1
+while(menuSelection != '0'):
 	print "1: Input team line up"
 	print "2: Individual lookup"
 	print "3: Summoner spell reference"
@@ -88,6 +88,15 @@ while(menuSelection != '3'):
 		print hero5 + ":", database[hero5][0], database[hero5][1], database[hero1][2]
 		print "\n"
 	
-	elif (menuSelection == '0'):
+	elif(menuSelection == '2'):
+		print "There are no spaces, apostrophes, and capitalizations except the first letter. Examples: Drmundo, Khazix, Chogath, Jarvaniv"
+		hero1 = raw_input('1:').capitalize()
+		while((hero1 in database) == False):
+			print "Character doesn't exist in database try again"
+			hero1 = raw_input('1:').capitalize()
+		print "\n"
+		print hero1 + ":", database[hero1][0], database[hero1][1], database[hero1][2]
+		print "\n"
+if (menuSelection == '0'):
 		sys.exit()
 
